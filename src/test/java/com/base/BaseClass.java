@@ -2,24 +2,16 @@ package com.base;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.MediaEntityBuilder;
-import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.markuputils.ExtentColor;
-import com.aventstack.extentreports.markuputils.Markup;
-import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.browsers.BrowserConfig;
-import com.relevantcodes.extentreports.LogStatus;
 import com.util.SeleniumHelper;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 
 import java.io.IOException;
-import java.lang.reflect.Method;
 import java.net.MalformedURLException;
-import java.util.logging.Logger;
 
 public class BaseClass {
 
@@ -27,6 +19,7 @@ public class BaseClass {
     public static ExtentHtmlReporter htmlReporter;
     public static ExtentReports extent;
     public static ExtentTest logger;
+
 
 
     @BeforeSuite
@@ -37,6 +30,7 @@ public class BaseClass {
         extent.attachReporter(htmlReporter);
         htmlReporter.config().setTheme(Theme.DARK);
         htmlReporter.setAppendExisting(true);
+
     }
 
 
@@ -62,7 +56,9 @@ public class BaseClass {
             SeleniumHelper.takeScreenShot(driver);
         } else {
             logger.pass(result.getMethod().getDescription());
+            logger.pass(result.getTestName());
         }
+
         driver.quit();
     }
 

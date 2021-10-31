@@ -1,7 +1,6 @@
 package com.util;
 
 import com.google.common.io.Files;
-import org.apache.poi.hwpf.model.SavedByTable;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -10,7 +9,6 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 import java.io.File;
 import java.io.FileInputStream;
@@ -173,8 +171,6 @@ public class SeleniumHelper {
             user.sendKeys(a.getKey());
             pass.sendKeys(a.getValue());
         }
-
-
 
     }
 

@@ -3,6 +3,7 @@ package com.tests;
 import com.base.BaseClass;
 import com.pages.HomePage;
 import com.pages.WomenPage;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class WomenPageTest extends BaseClass {
@@ -17,6 +18,7 @@ public class WomenPageTest extends BaseClass {
         homePage = new HomePage(driver);
         womenPage = homePage.click_on_women();
         womenPage.verify_all_women_product();
+        Assert.fail();
     }
 
 
