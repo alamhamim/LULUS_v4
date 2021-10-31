@@ -16,6 +16,7 @@ public class LoginTest extends BaseClass {
         homePage = new HomePage(driver);
         loginPage = homePage.click_sign_in();
         loginPage.login_to_app();
+        logger.info("login error msg is verified");
     }
 
 

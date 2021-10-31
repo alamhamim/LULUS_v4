@@ -5,11 +5,11 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.asserts.SoftAssert;
+
+import javax.swing.*;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -161,7 +161,6 @@ public class SeleniumHelper {
         softAssert.assertEquals(actual, expected);
     }
 
-
     public static void insertData(HashMap<String, String> datas, WebElement user, WebElement pass) {
         Set<Map.Entry<String, String>> data = datas.entrySet();
         Iterator<Map.Entry<String, String>> iterator = data.iterator();
@@ -173,5 +172,16 @@ public class SeleniumHelper {
         }
 
     }
+
+    public static void scroll_down_js(WebDriver driver, int pixel) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,"+pixel+")", "");
+    }
+
+    public static void hover_over_and_click(WebDriver driver, WebElement element) {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).build().perform();
+    }
+
 
 }

@@ -10,6 +10,4 @@ public class LoginDataProvider {
         return data;
     }
 
-
-
 }

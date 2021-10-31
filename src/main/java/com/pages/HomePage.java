@@ -3,6 +3,7 @@ package com.pages;
 import com.dataProvider.HomePageDataProvider;
 import com.util.SeleniumHelper;
 import org.apache.tools.ant.taskdefs.Sleep;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -31,6 +32,9 @@ public class HomePage {
     @FindBy(xpath = "//header/div[3]/div[1]/div[1]/div[6]/ul[1]/li/a")
     private List<WebElement> all_header_homepage;
 
+    @FindBy(xpath = "//header/div[3]/div[1]/div[1]/div[6]/ul[1]/li[1]/a[1]")
+    WebElement women;
+
     public void verify_home_page_title() {
         SeleniumHelper.verifyTitle(driver, properties.getProperty("title"));
     }
@@ -58,6 +62,16 @@ public class HomePage {
         return new LoginPage(driver);
     }
 
+
+    public void scrollDownOnHomePage() throws InterruptedException {
+        SeleniumHelper.scroll_down_js(driver, 500);
+        Thread.sleep(10000);
+    }
+
+    public void hover_over_on_header() throws InterruptedException {
+        SeleniumHelper.hover_over_and_click(driver, women);
+        Thread.sleep(5000);
+    }
 
 
 

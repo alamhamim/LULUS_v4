@@ -18,7 +18,6 @@ public class WomenPageTest extends BaseClass {
         homePage = new HomePage(driver);
         womenPage = homePage.click_on_women();
         womenPage.verify_all_women_product();
-        Assert.fail();
     }
 
 

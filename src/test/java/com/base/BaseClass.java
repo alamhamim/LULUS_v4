@@ -52,11 +52,11 @@ public class BaseClass {
     public void tearDown(ITestResult result) throws IOException {
 
         if (result.getStatus() == ITestResult.FAILURE) {
-            logger.fail(result.getMethod().getDescription());
+            logger.fail(result.getMethod().getMethodName()+" << is FAILED");
+
             SeleniumHelper.takeScreenShot(driver);
         } else {
-            logger.pass(result.getMethod().getDescription());
-            logger.pass(result.getTestName());
+            logger.pass(result.getMethod().getMethodName()+" << is PASSED");
         }
 
         driver.quit();
