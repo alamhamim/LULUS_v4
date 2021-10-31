@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="RegresstionSuite">
+    <test name="RegressionTest">
+        <parameter name="browserName" value="chrome"></parameter>
+        <parameter name="url" value="http://automationpractice.com/index.php"></parameter>
+        <parameter name="environment" value="local"></parameter>
+        <parameter name="cloudTest" value="false"></parameter>
+        <parameter name="OS" value="MAC OS"></parameter>
+        <classes>
+            <class name="com.tests.WomenPageTest"></class>
+            <class name="com.tests.HomePageTest"></class>
+            <class name="com.tests.LoginTest"></class>
+        </classes>
+    </test>
+</suite>
