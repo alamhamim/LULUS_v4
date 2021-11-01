@@ -20,6 +20,16 @@ public class WomenPageTest extends BaseClass {
         womenPage.verify_all_women_product();
     }
 
+    @Test
+    public void verify_hover_over() throws InterruptedException {
+        logger = extent.createTest("Hover over test on Women Products");
+        homePage = new HomePage(driver);
+        womenPage = homePage.click_on_women();
+        womenPage.hover_over_all_product();
+    }
+
+
+
 
 
 

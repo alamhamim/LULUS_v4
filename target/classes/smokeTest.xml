@@ -8,7 +8,7 @@
         <parameter name="OS" value="MAC OS"></parameter>
        <!-- <parameter name="OS" value="windows"></parameter>-->
         <classes>
-            <class name="com.tests.HomePageTest"></class>
+            <class name="com.tests.WomenPageTest"></class>
 
         </classes>
         

@@ -178,9 +178,19 @@ public class SeleniumHelper {
         js.executeScript("window.scrollBy(0,"+pixel+")", "");
     }
 
-    public static void hover_over_and_click(WebDriver driver, WebElement element) {
+    public static void hover_over_on_element(WebDriver driver, WebElement element) {
         Actions actions = new Actions(driver);
         actions.moveToElement(element).build().perform();
+    }
+
+    public static void hover_over_on_elements(WebDriver driver, List<WebElement> elements) throws InterruptedException {
+        Actions actions = new Actions(driver);
+        for (int i = 0; i < elements.size(); i++) {
+            Thread.sleep(2000);
+            actions.moveToElement(elements.get(i)).build().perform();
+            scroll_down_js(driver, 130);
+        }
+
     }
 
 

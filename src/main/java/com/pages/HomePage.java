@@ -2,14 +2,10 @@ package com.pages;
 
 import com.dataProvider.HomePageDataProvider;
 import com.util.SeleniumHelper;
-import org.apache.tools.ant.taskdefs.Sleep;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,12 +61,12 @@ public class HomePage {
 
     public void scrollDownOnHomePage() throws InterruptedException {
         SeleniumHelper.scroll_down_js(driver, 500);
-        Thread.sleep(10000);
+        Thread.sleep(5000);
     }
 
     public void hover_over_on_header() throws InterruptedException {
-        SeleniumHelper.hover_over_and_click(driver, women);
-        Thread.sleep(5000);
+        SeleniumHelper.hover_over_on_elements(driver, all_header_homepage);
+        Thread.sleep(2000);
     }
 
 
