@@ -10,7 +10,7 @@ public class LoginTest extends BaseClass {
     HomePage homePage;
     LoginPage loginPage;
 
-    @Test
+    @Test(priority = 6)
     public void verify_login() {
         logger = extent.createTest("Login Verify");
         homePage = new HomePage(driver);

@@ -28,9 +28,6 @@ public class HomePage {
     @FindBy(xpath = "//header/div[3]/div[1]/div[1]/div[6]/ul[1]/li/a")
     private List<WebElement> all_header_homepage;
 
-    @FindBy(xpath = "//header/div[3]/div[1]/div[1]/div[6]/ul[1]/li[1]/a[1]")
-    WebElement women;
-
     public void verify_home_page_title() {
         SeleniumHelper.verifyTitle(driver, properties.getProperty("title"));
     }
@@ -68,7 +65,6 @@ public class HomePage {
         SeleniumHelper.hover_over_on_elements(driver, all_header_homepage);
         Thread.sleep(2000);
     }
-
 
 
 }

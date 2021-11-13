@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test thread-count="5" verbose="0" name="Command line test(failed)">
+    <classes>
+      <class name="com.tests.Rough_o1_Test">
+        <methods>
+          <include name="testPrice"/>
+          <include name="browserSetup"/>
+          <include name="tearDown"/>
+          <include name="afterSuite"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.tests.Rough_o1_Test -->
+      <class name="com.tests.WomenPageTest">
+        <methods>
+          <include name="verify_add_to_cart_test"/>
+          <include name="verify_hover_over_test"/>
+          <include name="browserSetup"/>
+          <include name="tearDown"/>
+          <include name="afterSuite"/>
+          <include name="verify_all_product_women_page"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.tests.WomenPageTest -->
+      <class name="com.tests.LoginTest">
+        <methods>
+          <include name="verify_login"/>
+          <include name="browserSetup"/>
+          <include name="tearDown"/>
+          <include name="afterSuite"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.tests.LoginTest -->
+      <class name="com.tests.HomePageTest">
+        <methods>
+          <include name="scrollTest"/>
+          <include name="title_test_homepage"/>
+          <include name="hover_over_header_test"/>
+          <include name="verify_header_click_test_homepage"/>
+          <include name="verify_header_text_test_homepage"/>
+          <include name="browserSetup"/>
+          <include name="tearDown"/>
+          <include name="afterSuite"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.tests.HomePageTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

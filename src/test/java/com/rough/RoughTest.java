@@ -1,10 +1,15 @@
 package com.rough;
 
+import org.apache.poi.hssf.record.formula.functions.Char;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.tools.ant.taskdefs.Sleep;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 import java.io.File;
@@ -13,6 +18,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class RoughTest {
+    /*WebDriver driver;
 
     @Test
     public void click_on_homepage_header() {
@@ -77,15 +83,16 @@ public class RoughTest {
 
 
     @Test
-    public void stringClass() {
+    public void testOne() {
+        System.setProperty("webdriver.chrome.driver", "/Users/ninja/drivers/chromedriver");
+        driver = new ChromeDriver();
+
+
+
 
     }
 
 
-    @Test
-    public void stringBuffer() {
-
-    }
 
 
 
@@ -105,7 +112,5 @@ public class RoughTest {
 
 
 
-
-
-
+*/
 }

@@ -21,7 +21,6 @@ public class BaseClass {
     public static ExtentTest logger;
 
 
-
     @BeforeSuite
     public void setUp() {
         String reportFolder = "Test-Report/report_"+SeleniumHelper.getDateAndTime()+".html";

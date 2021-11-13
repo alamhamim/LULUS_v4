@@ -7,9 +7,11 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
 import javax.swing.*;
+import javax.xml.bind.Element;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -155,7 +157,6 @@ public class SeleniumHelper {
         return element.getText();
     }
 
-
     public static void verifyText(String actual, String expected) {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(actual, expected);
@@ -190,6 +191,55 @@ public class SeleniumHelper {
             actions.moveToElement(elements.get(i)).build().perform();
             scroll_down_js(driver, 130);
         }
+
+    }
+
+    public static void refresh(WebDriver driver) {
+        driver.navigate().refresh();
+    }
+
+    public static void verify_element_present(WebElement element) {
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertTrue(element.isDisplayed());
+    }
+
+    public static WebElement get_text_from_elements(List<WebElement> elements, String text) {
+        WebElement element = null;
+        for (int i = 0; i<elements.size(); i++) {
+            if (elements.get(i).getText().equalsIgnoreCase(text)) {
+               element = elements.get(i);
+            }
+        }
+        return element;
+    }
+
+
+    public static void verifyPrice(WebElement element, double expectedPrice) {
+        String actualText = element.getText();
+        String price = actualText.replace('$', ' ').trim();
+        double actualPrice = Double.parseDouble(price);
+
+        if (actualPrice == expectedPrice) {
+            System.out.println("Price is verified");
+        } else {
+            Assert.fail();
+        }
+    }
+
+    public static void verifyPrice(WebElement oldPrice, WebElement newPrice, float f) {
+        String oldPriceText = oldPrice.getText();
+        int oldPriceNum = Integer.parseInt(oldPriceText.replace("$", ""));
+
+        String newPriceText = newPrice.getText();
+        int newPriceNum = Integer.parseInt(newPriceText.replace("$", ""));
+
+        if (oldPriceNum*f == newPriceNum) {
+            System.err.println("Price is verified");
+
+        } else {
+            System.out.println("Can not  verify the price");
+        }
+
 
     }
 
