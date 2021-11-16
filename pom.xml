@@ -138,7 +138,7 @@
                 <version>3.0.0-M5</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>Test-Runner/somkeTest.xml</suiteXmlFile>
+                        <suiteXmlFile>Test-Runner/smokeTest.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
