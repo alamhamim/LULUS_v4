@@ -6,7 +6,7 @@
         <parameter name="environment" value="local"></parameter>
         <parameter name="cloudTest" value="false"></parameter>
         <!--<parameter name="OS" value="MAC OS"></parameter>-->
-        <parameter name="OS" value="windows"></parameter>
+        <parameter name="OS" value="MAC OS"></parameter>
         <!--<classes>
             <class name="com.tests.WomenPageTest"></class>
             <class name="com.tests.HomePageTest"></class>
